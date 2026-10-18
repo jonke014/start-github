@@ -41,7 +41,7 @@ main {
   }
 }
 
-section {
+main > section {
   background-color: white;
   padding: 20px;
   border-radius: 5px;
@@ -59,19 +59,126 @@ section h3 {
 
 .activity-card {
   margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  padding: 18px;
+  border: 1px solid #e1e6f0;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #fff 0%, #f8faff 100%);
+  box-shadow: 0 3px 10px rgba(26, 35, 126, 0.07);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
+  font-size: 1.15rem;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-description {
+  color: #4f596b;
+}
+
+.activity-detail {
+  color: #596273;
+  font-size: 0.94rem;
+}
+
+.availability strong {
+  color: #1a237e;
+}
+
+.participants-section {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-left: 3px solid #3949ab;
+  border-radius: 0 8px 8px 0;
+  background-color: #f0f3ff;
+}
+
+.participants-section h5 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.participant-count {
+  display: inline-flex;
+  min-width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+  border-radius: 999px;
+  background-color: #dce3ff;
+  color: #1a237e;
+  font-size: 0.78rem;
+}
+
+.participant-list {
+  list-style: none;
+  padding-left: 0;
+  color: #3f4859;
+}
+
+.participant-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 3px 0;
+}
+
+.participant-email {
+  overflow-wrap: anywhere;
+}
+
+.remove-participant {
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #a33a46;
+}
+
+.remove-participant:hover:not(:disabled) {
+  background-color: #fcebed;
+  color: #842c36;
+}
+
+.remove-participant:focus-visible {
+  outline: 2px solid #3949ab;
+  outline-offset: 2px;
+}
+
+.remove-participant:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.remove-participant svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.participants-empty {
+  color: #697386;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .form-group {
